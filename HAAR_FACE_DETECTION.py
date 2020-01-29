@@ -21,6 +21,7 @@ def DetectFace(data_path):
     # Draw the rectangle around each face
     for (x, y, w, h) in faces:
        cv2.rectangle(data, (x, y), (x+w, y+h), (255, 0, 0), 2)
+       # count number of faces
        face_count = face_count + 1
 
     if len(result_list)>0:
