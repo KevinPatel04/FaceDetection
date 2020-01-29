@@ -34,7 +34,7 @@ def DetectFace(data_path):
     else:
         print("No Face Detected!!")
     cv2.imwrite('mtcnn_result_img.jpg'.format(count),data)
-    start = time.time()
-    DetectFace(path)
-    end = time.time()
-    print("Execution time in seconds {}".format(end-start))
+start = time.time()
+DetectFace(path)
+end = time.time()
+print("Execution time in seconds {}".format(end-start))
