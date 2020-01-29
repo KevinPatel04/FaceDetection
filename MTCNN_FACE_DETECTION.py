@@ -25,7 +25,7 @@ def DetectFace(data_path):
         x1, y1, width, height = result_list[i]['box']
         x2, y2 = x1 + width, y1 + height
         # draw the box arround the face
-        cv2.rectangle(imgframe, (x1, y1), (x2, y2), (255, 0, 0), 2)
+        cv2.rectangle(data, (x1, y1), (x2, y2), (255, 0, 0), 2)
         # count the number of face detected
         face_count = face_count+1
 
@@ -33,7 +33,7 @@ def DetectFace(data_path):
         print("{} Face Detected".format(face_count))
     else:
         print("No Face Detected!!")
-    cv2.imwrite('mtcnn_result_img.jpg'.format(count),imgframe)
+    cv2.imwrite('mtcnn_result_img.jpg'.format(count),data)
     start = time.time()
     DetectFace(path)
     end = time.time()
