@@ -23,7 +23,7 @@ def detect_faces(f_cascade, colored_img, scaleFactor = 1.1):
     return img_copy
 
 #load cascade classifier training file for lbpcascade
-lbp_face_cascade = cv2.CascadeClassifier('/models/lbpcascade_frontalface.xml')
+lbp_face_cascade = cv2.CascadeClassifier('lbpcascade_frontalface.xml')
 
 #load test image
 image = cv2.imread(impath)
