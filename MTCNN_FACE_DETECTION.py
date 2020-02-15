@@ -5,13 +5,14 @@ import cv2
 import time
 import os
 
-face_count = 0
-
 # specify the image path [ .jpg, .png, .jpeg]
 path = PATH_OF_IMAGE
 
 # function to detect faces
 def DetectFace(data_path):
+    # initialize face count with 0 
+    face_count = 0
+
     # read the image file
     data = cv2.imread(data_path)
 
@@ -28,12 +29,12 @@ def DetectFace(data_path):
         cv2.rectangle(data, (x1, y1), (x2, y2), (255, 0, 0), 2)
         # count the number of face detected
         face_count = face_count+1
-
+        
     if len(result_list)>0:
         print("{} Face Detected".format(face_count))
     else:
         print("No Face Detected!!")
-    cv2.imwrite('mtcnn_result_img.jpg'.format(count),data)
+    cv2.imwrite('mtcnn_result_img.jpg',data)
 start = time.time()
 DetectFace(path)
 end = time.time()
