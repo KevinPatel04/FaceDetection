@@ -25,7 +25,7 @@ def DetectFace(data_path):
        # count number of faces
        face_count = face_count + 1
 
-    if len(result_list)>0:
+    if len(faces)>0:
         print("{} Face Detected".format(face_count))
     else:
         print("No Face Detected!!")
