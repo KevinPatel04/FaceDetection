@@ -33,7 +33,7 @@ def DetectFace(data_path):
         print("{} Face Detected".format(face_count))
     else:
         print("No Face Detected!!")
-    cv2.imwrite('dlib_frontal_face_result_img.jpg',img)
+    cv2.imwrite('cnn_face_result_img.jpg',img)
 start = time.time()
 DetectFace(path)
 end = time.time()
