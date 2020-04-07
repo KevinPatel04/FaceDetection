@@ -15,7 +15,7 @@ def detect_faces(f_cascade, colored_img, scaleFactor = 1.1):
     gray = cv2.cvtColor(img_copy, cv2.COLOR_BGR2GRAY)
     
     #let's detect multiscale (some images may be closer to camera than others) images
-    faces = f_cascade.detectMultiScale(gray, scaleFactor=scaleFactor, minNeighbors=5);
+    faces = f_cascade.detectMultiScale(gray, scaleFactor=scaleFactor, minNeighbors=5)
     
     #go over list of faces and draw them as rectangles on original colored img
     for (x, y, w, h) in faces:
